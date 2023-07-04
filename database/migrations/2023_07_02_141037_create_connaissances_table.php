@@ -19,13 +19,14 @@ return new class extends Migration
             $table->String('img_connaiss');
             $table->String('video_connaissance')->nullable();
             $table->String('titre_connaissance')->nullable();
+            $table->Integer('nbr_vues');
             $table->unsignedBigInteger('id_niveau');
             $table->unsignedBigInteger('id_etudiant');
             $table->unsignedBigInteger('id_matiere');
             $table->foreign('id_niveau')->references('id_niveau')->on('niveaux');
             $table->foreign('id_etudiant')->references('id_etudiant')->on('etudiants');
             $table->foreign('id_matiere')->references('id_matiere')->on('matieres');
-            $table->timestamps();
+
         });
     }
 

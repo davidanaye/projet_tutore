@@ -12,6 +12,11 @@ class Niveau extends Model
     protected $table = 'niveaux';
     protected $primaryKey = 'id_niveau';
 
+    protected $fillable = [
+        'nom_niveau',
+        'numero_niveau'
+    ];
+
     public function matiere()
 
 {
@@ -21,6 +26,10 @@ class Niveau extends Model
 public function etudiant()
 {
  return $this->hasMany(etudiant::class, 'id_niveau');
+}
+public function connaissance()
+{
+ return $this->hasMany( connaissance::class, 'id_niveau');
 }
 
 }

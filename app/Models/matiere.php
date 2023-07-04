@@ -14,4 +14,11 @@ class matiere extends Model
         return$this->belongTo(Niveau::class,'id_niveau');
 
     }
+
+    public function connaissance(){
+        return$this->belongTo(connaissance::class,'id_connaissance');
+
+    }
+
+
 }

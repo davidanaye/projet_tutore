@@ -20,5 +20,14 @@ class Etudiant extends Model
 
     }
 
-    
+    public function connaissance()
+    {
+        return $this->belongsToMany(Connaissance::class, 'publication');
+    }
+       public function appreciation()
+       {
+           return $this->hasMany(appreciation::class, 'id_appreciation');
+       }
+
+
 }
