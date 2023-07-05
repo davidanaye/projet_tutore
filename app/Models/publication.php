@@ -22,6 +22,10 @@ class publication extends Model
     {
         return $this->belongsTo(Connaissance::class, 'id_connaissance');
     }
+    public function connaissan()
+    {
+        //
+    }
 
 
     use HasFactory;
