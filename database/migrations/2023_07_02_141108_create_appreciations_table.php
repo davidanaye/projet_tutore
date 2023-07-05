@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('unlike')->default(0);
             $table->timestamps();
 
-            $table->foreign('id_connaiss')->references('id_connaissance')->on('connaissance');
-            $table->foreign('id_etudiant')->references('id_etudiant')->on('etudiant');
+            $table->foreign('id_connaissance')->references('id_connaissance')->on('connaissances');
+          $table->foreign('id_etudiant')->references('id_etudiant')->on('etudiants');
         });
     }
 
